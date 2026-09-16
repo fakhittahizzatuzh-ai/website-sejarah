@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Jejak Sejarah Indonesia</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f1e8;
+            color: #333;
+            line-height: 1.7;
+        }
+
+        /* NAVBAR */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+
+            background: #2f241d;
+            padding: 16px 8%;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        nav .logo {
+            color: white;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        nav ul li a:hover {
+            color: #d9b77d;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 500px;
+
+            background:
+                linear-gradient(
+                    rgba(0,0,0,0.55),
+                    rgba(0,0,0,0.55)
+                ),
+                url("https://images.unsplash.com/photo-1532375810709-75b1da00537c");
+
+            background-size: cover;
+            background-position: center;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            text-align: center;
+            color: white;
+            padding: 30px;
+        }
+
+        .hero h1 {
+            font-size: 50px;
+            margin-bottom: 15px;
+        }
+
+        .hero p {
+            max-width: 700px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        /* CONTENT */
+
+        .container {
+            width: 90%;
+            max-width: 1100px;
+            margin: 50px auto;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: #4a3325;
+        }
+
+        .section-title p {
+            color: #666;
+        }
+
+        /* ARTICLE */
+
+        article {
+            background: white;
+            padding: 35px;
+            border-radius: 15px;
+            margin-bottom: 35px;
+
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        article h2 {
+            color: #4a3325;
+            margin-bottom: 15px;
+        }
+
+        article h3 {
+            margin-top: 20px;
+            color: #6a4a35;
+        }
+
+        article p {
+            margin-bottom: 15px;
+            text-align: justify;
+        }
+
+        /* CARDS */
+
+        .cards {
+            display: grid;
+            grid-template-columns:
+                repeat(auto-fit, minmax(250px, 1fr));
+
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 25px;
+            border-radius: 15px;
+
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            color: #4a3325;
+            margin-bottom: 10px;
+        }
+
+        /* TIMELINE */
+
+        .timeline {
+            border-left: 4px solid #6a4a35;
+            padding-left: 25px;
+        }
+
+        .timeline-item {
+            margin-bottom: 30px;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .timeline-item strong {
+            color: #6a4a35;
+            font-size: 20px;
+        }
+
+        /* FACT */
+
+        .fact {
+            background: #e9dfce;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 25px;
+        }
+
+        .fact h3 {
+            color: #4a3325;
+            margin-bottom: 10px;
+        }
+
+        /* FOOTER */
+
+        footer {
+            background: #2f241d;
+            color: white;
+            text-align: center;
+            padding: 30px;
+            margin-top: 60px;
+        }
+
+        /* RESPONSIVE */
+
+        @media(max-width: 700px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                flex-wrap: wrap;
+                justify-content: center;
+                gap: 12px;
+            }
+
+            .hero h1 {
+                font-size: 35px;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav>
+
+        <div class="logo">
+            Jejak Sejarah
+        </div>
+
+        <ul>
+            <li><a href="#beranda">Beranda</a></li>
+            <li><a href="#sejarah">Sejarah</a></li>
+            <li><a href="#timeline">Timeline</a></li>
+            <li><a href="#fakta">Fakta Menarik</a></li>
+        </ul>
+
+    </nav>
+
+
+    <!-- HERO -->
+
+    <section class="hero" id="beranda">
+
+        <div>
+
+            <h1>Jejak Sejarah Indonesia</h1>
+
+            <p>
+                Mengenal perjalanan panjang Indonesia dari masa kedatangan
+                bangsa Eropa, masa penjajahan, berbagai perlawanan rakyat,
+                hingga perjuangan menuju kemerdekaan.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <main class="container">
+
+
+        <!-- INTRO -->
+
+        <section id="sejarah">
+
+            <div class="section-title">
+
+                <h2>Sejarah Penjajahan Indonesia</h2>
+
+                <p>
+                    Perjalanan panjang yang membentuk sejarah bangsa Indonesia.
+                </p>
+
+            </div>
+
+
+            <article>
+
+                <h2>Awal Kedatangan Bangsa Eropa</h2>
+
+                <p>
+                    Indonesia sejak dahulu dikenal sebagai wilayah yang kaya
+                    akan hasil bumi, terutama rempah-rempah seperti cengkih,
+                    pala, dan lada. Kekayaan tersebut membuat wilayah
+                    Nusantara menjadi salah satu tujuan penting dalam
+                    perdagangan dunia.
+                </p>
+
+                <p>
+                    Pada akhir abad ke-15 dan awal abad ke-16, bangsa-bangsa
+                    Eropa mulai melakukan pelayaran ke berbagai wilayah Asia.
+                    Mereka datang dengan tujuan perdagangan, mencari sumber
+                    rempah-rempah, serta memperluas pengaruh mereka.
+                </p>
+
+                <p>
+                    Kedatangan tersebut kemudian berkembang menjadi
+                    penguasaan wilayah dan perdagangan. Dalam perjalanan
+                    sejarahnya, Portugis, Belanda, Inggris, dan Jepang
+                    memiliki periode kekuasaan atau pendudukan di wilayah
+                    Indonesia.
+                </p>
+
+            </article>
+
+        </section>
+
+
+        <!-- CARDS -->
+
+        <section>
+
+            <div class="section-title">
+
+                <h2>Masa Kekuasaan Asing</h2>
+
+                <p>
+                    Beberapa periode penting dalam sejarah Indonesia.
+                </p>
+
+            </div>
+
+
+            <div class="cards">
+
+
+                <div class="card">
+
+                    <h3>🇵🇹 Portugis</h3>
+
+                    <p>
+                        Portugis menjadi salah satu bangsa Eropa yang datang
+                        ke Nusantara dalam rangka mencari dan menguasai
+                        perdagangan rempah-rempah.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🇳🇱 Belanda</h3>
+
+                    <p>
+                        Belanda membentuk VOC pada 1602. VOC memperoleh
+                        berbagai hak istimewa dan memainkan peranan besar
+                        dalam perdagangan serta politik di Nusantara.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🇬🇧 Inggris</h3>
+
+                    <p>
+                        Inggris pernah memerintah di wilayah Hindia Belanda
+                        pada awal abad ke-19. Salah satu tokoh yang dikenal
+                        dari periode ini adalah Thomas Stamford Raffles.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🇯🇵 Jepang</h3>
+
+                    <p>
+                        Jepang menduduki Indonesia pada masa Perang Dunia II.
+                        Pendudukan tersebut berlangsung dari 1942 sampai
+                        1945.
+                    </p>
+
+                </div>
+
+
+            </div>
+
+        </section>
+
+
+        <!-- VOC -->
+
+        <article>
+
+            <h2>VOC dan Perdagangan Rempah-Rempah</h2>
+
+            <p>
+                VOC atau Vereenigde Oostindische Compagnie merupakan
+                perusahaan dagang Belanda yang didirikan pada tahun 1602.
+                VOC diberikan berbagai hak khusus oleh pemerintah Belanda,
+                termasuk hak untuk membuat perjanjian, memiliki pasukan,
+                serta melakukan perdagangan.
+            </p>
+
+            <p>
+                Dengan kekuatan tersebut, VOC tidak hanya menjalankan
+                aktivitas perdagangan, tetapi juga terlibat dalam politik
+                dan konflik di berbagai wilayah Nusantara.
+            </p>
+
+            <div class="fact">
+
+                <h3>💡 Tahukah Kamu?</h3>
+
+                <p>
+                    VOC sering disebut sebagai salah satu perusahaan
+                    perdagangan paling berpengaruh pada masanya karena
+                    memiliki kekuasaan yang sangat luas.
+                </p>
+
+            </div>
+
+        </article>
+
+
+        <!-- PERLAWANAN -->
+
+        <article>
+
+            <h2>Perlawanan Rakyat Indonesia</h2>
+
+            <p>
+                Penguasaan asing menimbulkan berbagai bentuk perlawanan
+                dari masyarakat di berbagai daerah. Perlawanan tersebut
+                terjadi dalam waktu dan kondisi yang berbeda-beda.
+            </p>
+
+            <p>
+                Beberapa tokoh yang dikenal dalam sejarah perlawanan
+                terhadap kekuasaan kolonial antara lain Sultan Hasanuddin,
+                Pattimura, Tuanku Imam Bonjol, Pangeran Diponegoro,
+                Cut Nyak Dien, dan banyak tokoh lainnya.
+            </p>
+
+            <p>
+                Perlawanan-perlawanan tersebut menjadi bagian penting dari
+                perjalanan sejarah Indonesia menuju terbentuknya kesadaran
+                kebangsaan.
+            </p>
+
+        </article>
+
+
+        <!-- TIMELINE -->
+
+        <section id="timeline">
+
+            <div class="section-title">
+
+                <h2>📅 Timeline Sejarah</h2>
+
+                <p>Beberapa peristiwa penting dalam perjalanan sejarah Indonesia.</p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <strong>1511</strong>
+
+                    <p>
+                        Portugis menguasai Malaka, yang menjadi salah satu
+                        pusat penting perdagangan di kawasan Asia Tenggara.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>1602</strong>
+
+                    <p>
+                        VOC didirikan oleh Belanda.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>1799</strong>
+
+                    <p>
+                        VOC secara resmi dibubarkan.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>1942</strong>
+
+                    <p>
+                        Jepang mulai menduduki wilayah Indonesia setelah
+                        Belanda menyerah.
+                    </p>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <strong>1945</strong>
+
+                    <p>
+                        Indonesia memproklamasikan kemerdekaan pada
+                        17 Agustus 1945.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FAKTA -->
+
+        <section id="fakta">
+
+            <div class="section-title">
+
+                <h2>🔎 Fakta Menarik</h2>
+
+            </div>
+
+
+            <div class="cards">
+
+                <div class="card">
+
+                    <h3>🌿 Rempah-rempah</h3>
+
+                    <p>
+                        Cengkih dan pala dari Kepulauan Maluku merupakan
+                        komoditas yang sangat berharga dalam perdagangan
+                        internasional pada masa itu.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🏛️ VOC</h3>
+
+                    <p>
+                        VOC didirikan pada tahun 1602 dan dibubarkan pada
+                        tahun 1799.
+                    </p>
+
+                </div>
+
+
+                <div class="card">
+
+                    <h3>🇮🇩 Kemerdekaan</h3>
+
+                    <p>
+                        Proklamasi Kemerdekaan Indonesia dibacakan pada
+                        17 Agustus 1945.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- CONCLUSION -->
+
+        <article>
+
+            <h2>Kesimpulan</h2>
+
+            <p>
+                Sejarah penjajahan Indonesia merupakan perjalanan panjang
+                yang melibatkan perdagangan, perebutan kekuasaan,
+                perlawanan masyarakat, hingga munculnya kesadaran untuk
+                membangun bangsa yang merdeka.
+            </p>
+
+            <p>
+                Dengan mempelajari sejarah, kita dapat memahami bagaimana
+                berbagai peristiwa pada masa lalu ikut membentuk perjalanan
+                Indonesia hingga menjadi negara yang kita kenal sekarang.
+            </p>
+
+        </article>
+
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <p>
+            © 2026 Jejak Sejarah Indonesia
+        </p>
+
+        <p>
+            Belajar sejarah untuk memahami perjalanan bangsa.
+        </p>
+
+    </footer>
+
+</body>
+</html>
